@@ -1,1 +1,1 @@
-This repository holds all resources for [[https://www.p-snow-org][my blog]]
+This repository holds all resources for [[https://www.p-snow.org/blog][my blog]]
