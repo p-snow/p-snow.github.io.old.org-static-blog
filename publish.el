@@ -24,6 +24,8 @@ t(require 'ox-publish)
 (setq org-static-blog-enable-tags t)
 (setq org-static-blog-index-file "top.html")
 (setq org-static-blog-archive-file "index.html")
+(setq org-static-blog-page-header
+      "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.css\">")
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
 
