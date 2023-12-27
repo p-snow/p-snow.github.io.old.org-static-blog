@@ -10,7 +10,7 @@
 
 The following two templates are used to create the same skeleton for a blog post in Org-mode, using YASnippet and TempEL as the respective tools.
 
-@@html:<details><summary>YASnippet</summary><p>@@
+{{{accordion-begin(YASnippet)}}}
 #+begin_src text
   # -*- mode: snippet -*-
   # name: blog-post
@@ -23,7 +23,7 @@ The following two templates are used to create the same skeleton for a blog post
   :END:
   ${0:`(org-expiry-insert-created)`}
 #+end_src
-@@html:</p></details>@@
+{{{accordion-end}}}
 
 TempEL
 #+begin_src emacs-lisp
