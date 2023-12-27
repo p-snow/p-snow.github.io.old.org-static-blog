@@ -25,12 +25,13 @@ The following two templates are used to create the same skeleton for a blog post
 #+end_src
 {{{accordion-end}}}
 
-TempEL
+{{{accordion-begin(TempEL)}}}
 #+begin_src emacs-lisp
   (blog & (org-insert-heading-after-current)
         (p "blog title: " title t) (insert title)
         (prog1 nil (org-schedule nil (current-time)))
         (org-entry-put (point) "EXPORT_FILE_NAME" (format-time-string "%Y%m%d_%H%M")))
 #+end_src
+{{{accordion-end}}}
 
 As you can see, the TempEL format allows you to write templates in full Lisp data code, whereas YASnippet's format permits the use of Lisp code to a limited extent, as long as the code does not directly manipulate buffer contents. That's the point I'd like to recommend TempEL to Lispers and Emacs enthusiasts. You can see [[https://github.com/p-snow/config/blob/main/dotfiles.org#my-tempel-templates-in-modes][my TempEL templates]] being incorporated into [[https://www.p-snow.org/config/dotfiles.html][my configuration collection]].
