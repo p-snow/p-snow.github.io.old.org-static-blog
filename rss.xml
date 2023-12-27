@@ -4,15 +4,16 @@
 <title><![CDATA[.dot life]]></title>
 <description><![CDATA[.dot life]]></description>
 <link>https://www.p-snow.org/blog</link>
-<lastBuildDate>Tue, 26 Dec 2023 11:43:11 +0000</lastBuildDate>
+<lastBuildDate>Wed, 27 Dec 2023 06:44:02 +0000</lastBuildDate>
 <item>
   <title><![CDATA[How to Write a Blog Post]]></title>
   <description><![CDATA[
 
-<div id="outline-container-org8decefa" class="outline-2">
-<h2 id="org8decefa">Org-modeは九龍城砦&#xa0;&#xa0;&#xa0;<span class="tag"><span class="org">org</span>&#xa0;<span class="japanese">japanese</span></span></h2>
-<div class="outline-text-2" id="text-org8decefa">
+<div id="outline-container-orgb2c33d4" class="outline-2">
+<h2 id="orgb2c33d4">Org-modeは九龍城砦&#xa0;&#xa0;&#xa0;<span class="tag"><span class="org">org</span>&#xa0;<span class="japanese">japanese</span></span></h2>
+<div class="outline-text-2" id="text-orgb2c33d4">
 <p>
+<preview>
 以下の記事を興味深く読みました。
 </p>
 
@@ -22,6 +23,7 @@
 
 <p>
 Logseq や Obsidian に org-mode が提供する機能(のいくつか)が取り入れられて、多くのユーザに支持されているようで、個人的には喜ばしいことだなと思っています。(すいません、どちらも使ったことはありません。)この現象をみていると私は、org-modeで提供されているある機能と、それを参考にして実装された他アプリの機能は同じなのか、ということをよく考えます。いや、機能としては確かにほぼ同等だろうとは思います。もちろん優劣の話でもありません。以下に展開してみましょう。
+</preview>
 </p>
 
 <p>
