@@ -1,6 +1,6 @@
 #+title: TempEL, an Emacs package for managing templates
 #+date: <2023-11-21 Tue>
-#+filetags: emacs
+#+filetags: emacs english
 
 #+SETUPFILE: content/header
 
