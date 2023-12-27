@@ -1,15 +1,8 @@
-#+title: How to Write a Blog Post
-#+date: <2020-07-03 08:57>
-#+filetags: computers emacs blog
+#+title: Org-modeは九龍城砦
+#+date: <2023-07-13 Thu 17:03>
+#+filetags: org japanese
 
 #+SETUPFILE: content/header
-
-* Org-modeは九龍城砦                      :org:japanese:
-SCHEDULED: <2023-07-13 Thu>
-:PROPERTIES:
-:CREATED:  [2023-07-13 Thu 17:03]
-:EXPORT_FILE_NAME: 20230713_1703
-:END:
 
 {{{prev-open}}}
 以下の記事を興味深く読みました。
