@@ -27,10 +27,10 @@ The following two templates are used to create the same skeleton for a blog post
 
 {{{accordion-begin(TempEL)}}}
 #+begin_src emacs-lisp
-  (blog & (org-insert-heading-after-current)
-        (p "blog title: " title t) (insert title)
-        (prog1 nil (org-schedule nil (current-time)))
-        (org-entry-put (point) "EXPORT_FILE_NAME" (format-time-string "%Y%m%d_%H%M")))
+(blog & (org-insert-heading-after-current)
+      (p "blog title: " title t) (insert title)
+      (prog1 nil (org-schedule nil (current-time)))
+      (org-entry-put (point) "EXPORT_FILE_NAME" (format-time-string "%Y%m%d_%H%M")))
 #+end_src
 {{{accordion-end}}}
 

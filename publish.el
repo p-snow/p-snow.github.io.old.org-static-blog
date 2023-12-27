@@ -36,6 +36,7 @@ t(require 'ox-publish)
       (concat "<header><nav>"
               "<a href=\"https://www.p-snow.org/blog\">Home</a>"
               "<a href=\"https://www.p-snow.org/config\">My Config</a>"
+              "<a href=\"https://www.p-snow.org/blog/tag-japanese.html\">日本語記事</a>"
               "</nav><h1>.dot Life</h1><p>by p-snow</p></header>"))
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
