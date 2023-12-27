@@ -34,8 +34,9 @@ t(require 'ox-publish)
               "<link rel=\"stylesheet\" href=\"./assets/css/style.css\">"))
 (setq org-static-blog-page-preamble
       (concat "<header><nav>"
+              "<a href=\"https://www.p-snow.org/blog\">Home</a>"
               "<a href=\"https://www.p-snow.org/config\">My Config</a>"
-              "</nav><h1>.dot Life</h1><p>My Website</p></header>"))
+              "</nav><h1>.dot Life</h1><p>by p-snow</p></header>"))
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
 

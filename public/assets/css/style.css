@@ -1,8 +1,4 @@
 /* Make the header bg full width, but the content inline with body */
-.status {
-  width: 100%;
-}
-
 body > div > header {
   background-color: var(--accent-bg);
   border-bottom: 1px solid var(--border);
