@@ -1,4 +1,4 @@
 # -*- mode: org -*-
 
-#+MACRO: prev-open @@html:<preview>@@
-#+MACRO: prev-close @@html:</preview>@@
+#+MACRO: preview-begin @@html:<preview>@@
+#+MACRO: preview-end @@html:</preview>@@
