@@ -22,10 +22,20 @@ t(require 'ox-publish)
 (setq org-static-blog-posts-directory "./content/posts/")
 (setq org-static-blog-drafts-directory "./content/drafts/")
 (setq org-static-blog-enable-tags t)
-(setq org-static-blog-index-file "top.html")
-(setq org-static-blog-archive-file "index.html")
+(setq org-static-blog-use-preview t)
+(setq org-static-blog-preview-start "<preview>")
+(setq org-static-blog-preview-end "</preview>")
+(setq org-static-blog-preview-link-p t)
 (setq org-static-blog-page-header
-      "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.css\">")
+      (concat "<meta charset=\"utf-8\">"
+              "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">"
+              "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+              "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.css\">"
+              "<link rel=\"stylesheet\" href=\"/assets/css/style.css\">"))
+(setq org-static-blog-page-preamble
+      (concat "<header><nav>"
+              "<a href=\"https://www.p-snow.org/config\">My Config</a>"
+              "</nav><h1>.dot Life</h1><p>My Website</p></header>"))
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
 
