@@ -4,7 +4,7 @@
 <title><![CDATA[.dot life]]></title>
 <description><![CDATA[.dot life]]></description>
 <link>https://www.p-snow.org/blog</link>
-<lastBuildDate>Wed, 27 Dec 2023 08:40:08 +0000</lastBuildDate>
+<lastBuildDate>Wed, 27 Dec 2023 08:48:48 +0000</lastBuildDate>
 <item>
   <title><![CDATA[TempEL, an Emacs package for managing templates]]></title>
   <description><![CDATA[
@@ -19,7 +19,7 @@ The following two templates are used to create the same skeleton for a blog post
 </p>
 
 <p>
-YASnippet
+<details><summary>YASnippet</summary><p>
 </p>
 <div class="org-src-container">
 <pre class="src src-text"># -*- mode: snippet -*-
@@ -34,6 +34,9 @@ SCHEDULED: ${2:`(format-time-string "&lt;%Y-%m-%d %a&gt;")`}
 ${0:`(org-expiry-insert-created)`}
 </pre>
 </div>
+<p>
+</p></details>
+</p>
 
 <p>
 TempEL
