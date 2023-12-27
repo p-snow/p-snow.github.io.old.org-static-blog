@@ -4,7 +4,7 @@
 <title><![CDATA[.dot life]]></title>
 <description><![CDATA[.dot life]]></description>
 <link>https://www.p-snow.org/blog</link>
-<lastBuildDate>Wed, 27 Dec 2023 09:27:36 +0000</lastBuildDate>
+<lastBuildDate>Wed, 27 Dec 2023 09:33:05 +0000</lastBuildDate>
 <item>
   <title><![CDATA[TempEL, an Emacs package for managing templates]]></title>
   <description><![CDATA[
@@ -55,8 +55,9 @@ ${0:`(org-expiry-insert-created)`}
 <p>
 As you can see, the TempEL format allows you to write templates in full Lisp data code, whereas YASnippet's format permits the use of Lisp code to a limited extent, as long as the code does not directly manipulate buffer contents. That's the point I'd like to recommend TempEL to Lispers and Emacs enthusiasts. You can see <a href="https://github.com/p-snow/config/blob/main/dotfiles.org#my-tempel-templates-in-modes">my TempEL templates</a> being incorporated into <a href="https://www.p-snow.org/config/dotfiles.html">my configuration collection</a>.
 </p>
-<div class="taglist"><a href="https://www.p-snow.org/blog/tags.html">Tags</a>: <a href="https://www.p-snow.org/blog/tag-emacs.html">emacs</a> </div>]]></description>
+<div class="taglist"><a href="https://www.p-snow.org/blog/tags.html">Tags</a>: <a href="https://www.p-snow.org/blog/tag-emacs.html">emacs</a> <a href="https://www.p-snow.org/blog/tag-english.html">english</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
+  <category><![CDATA[english]]></category>
   <link>https://www.p-snow.org/blog/20231119-1024.html</link>
   <guid>https://www.p-snow.org/blog/20231119-1024.html</guid>
   <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
