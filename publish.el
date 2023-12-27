@@ -31,7 +31,7 @@ t(require 'ox-publish)
               "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">"
               "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
               "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.css\">"
-              "<link rel=\"stylesheet\" href=\"/assets/css/style.css\">"))
+              "<link rel=\"stylesheet\" href=\"./assets/css/style.css\">"))
 (setq org-static-blog-page-preamble
       (concat "<header><nav>"
               "<a href=\"https://www.p-snow.org/config\">My Config</a>"
