@@ -3,8 +3,8 @@
 <channel>
 <title><![CDATA[.dot life]]></title>
 <description><![CDATA[.dot life]]></description>
-<link>https://www.p-snow.org/blog</link>
-<lastBuildDate>Thu, 28 Dec 2023 07:42:30 +0000</lastBuildDate>
+<link>https://www.p-snow.org</link>
+<lastBuildDate>Thu, 28 Dec 2023 07:45:09 +0000</lastBuildDate>
 <item>
   <title><![CDATA[TempEL, an Emacs package for managing templates]]></title>
   <description><![CDATA[
@@ -55,11 +55,11 @@ ${0:`(org-expiry-insert-created)`}
 <p>
 As you can see, the TempEL format allows you to write templates in full Lisp data code, whereas YASnippet's format permits the use of Lisp code to a limited extent, as long as the code does not directly manipulate buffer contents. That's the point I'd like to recommend TempEL to Lispers and Emacs enthusiasts. You can see <a href="https://github.com/p-snow/config/blob/main/dotfiles.org#my-tempel-templates-in-modes">my TempEL templates</a> being incorporated into <a href="https://www.p-snow.org/config/dotfiles.html">my configuration collection</a>.
 </p>
-<div class="taglist"><a href="https://www.p-snow.org/blog/tags.html">Tags</a>: <a href="https://www.p-snow.org/blog/tag-emacs.html">emacs</a> <a href="https://www.p-snow.org/blog/tag-english.html">english</a> </div>]]></description>
+<div class="taglist"><a href="https://www.p-snow.org/tags.html">Tags</a>: <a href="https://www.p-snow.org/tag-emacs.html">emacs</a> <a href="https://www.p-snow.org/tag-english.html">english</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[english]]></category>
-  <link>https://www.p-snow.org/blog/20231119-1024.html</link>
-  <guid>https://www.p-snow.org/blog/20231119-1024.html</guid>
+  <link>https://www.p-snow.org/20231119-1024.html</link>
+  <guid>https://www.p-snow.org/20231119-1024.html</guid>
   <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
 </item>
 <item>
@@ -107,11 +107,11 @@ org-modeは、確かに出来ることを列挙していくと「重厚な思想
 <p>
 加えて、機能と(キーボードメインの)ユーザ操作が独特のつながりをもつEmacsというプラットフォーム上での「体験」という点を考えれば、やはり両者はベツモノと考えた方がいいのではないか。現時点での私は、今のノートアプリ界隈の流れを見てそんなことを考えています。
 </p>
-<div class="taglist"><a href="https://www.p-snow.org/blog/tags.html">Tags</a>: <a href="https://www.p-snow.org/blog/tag-org.html">org</a> <a href="https://www.p-snow.org/blog/tag-japanese.html">japanese</a> </div>]]></description>
+<div class="taglist"><a href="https://www.p-snow.org/tags.html">Tags</a>: <a href="https://www.p-snow.org/tag-org.html">org</a> <a href="https://www.p-snow.org/tag-japanese.html">japanese</a> </div>]]></description>
   <category><![CDATA[org]]></category>
   <category><![CDATA[japanese]]></category>
-  <link>https://www.p-snow.org/blog/20230713-1703.html</link>
-  <guid>https://www.p-snow.org/blog/20230713-1703.html</guid>
+  <link>https://www.p-snow.org/20230713-1703.html</link>
+  <guid>https://www.p-snow.org/20230713-1703.html</guid>
   <pubDate>Thu, 13 Jul 2023 17:03:00 +0000</pubDate>
 </item>
 </channel>
