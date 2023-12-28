@@ -1,5 +1,5 @@
 #+title: About p-snow
-#+filetags: norss
+#+filetags: nonrss nonpost
 
 #+SETUPFILE: content/header
 

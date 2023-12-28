@@ -41,7 +41,7 @@ t(require 'ox-publish)
               "<a href=\"https://www.p-snow.org/about.xml\">About</a>"
               "<a href=\"https://www.p-snow.org/rss.xml\">RSS</a>"
               "</nav><h1>.dot life</h1><p>by p-snow</p></header>"))
-(setq org-static-blog-rss-excluded-tag "norss")
+(setq org-static-blog-rss-excluded-tag "nonrss")
 
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
