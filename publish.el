@@ -39,7 +39,7 @@ t(require 'ox-publish)
               "<a href=\"https://www.p-snow.org/blog/tag-english.html\">Posts</a>"
               "<a href=\"https://www.p-snow.org/blog/tag-japanese.html\">日本語記事</a>"
               "<a href=\"https://www.p-snow.org/blog/rss.xml\">RSS</a>"
-              "</nav><h1>.dot Life</h1><p>by p-snow</p></header>"))
+              "</nav><h1>.dot life</h1><p>by p-snow</p></header>"))
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
 
