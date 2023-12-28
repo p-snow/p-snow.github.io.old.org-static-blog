@@ -4,7 +4,26 @@
 <title><![CDATA[.dot life]]></title>
 <description><![CDATA[.dot life]]></description>
 <link>https://www.p-snow.org</link>
-<lastBuildDate>Thu, 28 Dec 2023 08:18:11 +0000</lastBuildDate>
+<lastBuildDate>Thu, 28 Dec 2023 08:27:20 +0000</lastBuildDate>
+<item>
+  <title><![CDATA[About p-snow]]></title>
+  <description><![CDATA[
+<p>
+An Emacs devotee living in Japan
+</p>
+
+<ul class="org-ul">
+<li><a href="https://emacs.ch/@p_snow">Mastodon</a></li>
+<li><a href="https://twitter.com/_p_snow">Twitter</a></li>
+<li><a href="https://github.com/p-snow">GitHub</a></li>
+<li><a href="https://www.youtube.com/@p-snow">YouTube</a></li>
+</ul>
+<div class="taglist"><a href="https://www.p-snow.org/tags.html">Tags</a>: <a href="https://www.p-snow.org/tag-nonpost.html">nonpost</a> </div>]]></description>
+  <category><![CDATA[nonpost]]></category>
+  <link>https://www.p-snow.org/about.html</link>
+  <guid>https://www.p-snow.org/about.html</guid>
+  <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title><![CDATA[TempEL, an Emacs package for managing templates]]></title>
   <description><![CDATA[
