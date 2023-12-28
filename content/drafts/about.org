@@ -1,5 +1,4 @@
 #+title: About p-snow
-#+date: <2023-12-01 Tue>
 #+filetags: nonrss
 
 #+SETUPFILE: content/header
