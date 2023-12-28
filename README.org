@@ -1,4 +1,4 @@
-This repository holds all resources for [[https://www.p-snow.org/blog][my blog]]
+This repository holds all resources for [[https://www.p-snow.org][my blog]]
 
 Steps to test locally
 1. build the site locally

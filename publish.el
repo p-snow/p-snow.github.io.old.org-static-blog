@@ -17,7 +17,7 @@ t(require 'ox-publish)
 
 (require 'org-static-blog)
 (setq org-static-blog-publish-title ".dot life")
-(setq org-static-blog-publish-url "https://www.p-snow.org/blog")
+(setq org-static-blog-publish-url "https://www.p-snow.org")
 (setq org-static-blog-publish-directory "./public/")
 (setq org-static-blog-posts-directory "./content/posts/")
 (setq org-static-blog-drafts-directory "./content/drafts/")
@@ -34,11 +34,11 @@ t(require 'ox-publish)
               "<link rel=\"stylesheet\" href=\"./assets/css/style.css\">"))
 (setq org-static-blog-page-preamble
       (concat "<header><nav>"
-              "<a href=\"https://www.p-snow.org/blog\">Home</a>"
+              "<a href=\"https://www.p-snow.org\">Home</a>"
               "<a href=\"https://www.p-snow.org/config\">My Config</a>"
-              "<a href=\"https://www.p-snow.org/blog/tag-english.html\">Posts</a>"
-              "<a href=\"https://www.p-snow.org/blog/tag-japanese.html\">日本語記事</a>"
-              "<a href=\"https://www.p-snow.org/blog/rss.xml\">RSS</a>"
+              "<a href=\"https://www.p-snow.org/tag-english.html\">Posts</a>"
+              "<a href=\"https://www.p-snow.org/tag-japanese.html\">日本語記事</a>"
+              "<a href=\"https://www.p-snow.org/rss.xml\">RSS</a>"
               "</nav><h1>.dot life</h1><p>by p-snow</p></header>"))
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
