@@ -22,7 +22,7 @@ t(require 'ox-publish)
 (setq org-static-blog-posts-directory "./content/posts/")
 (setq org-static-blog-drafts-directory "./content/drafts/")
 (setq org-static-blog-enable-tags t)
-(setq org-static-blog-use-preview t)
+(setq org-static-blog-use-preview nil)
 (setq org-static-blog-preview-start "<preview>")
 (setq org-static-blog-preview-end "</preview>")
 (setq org-static-blog-preview-link-p t)
@@ -38,7 +38,7 @@ t(require 'ox-publish)
               "<a href=\"https://www.p-snow.org/config\">My Config</a>"
               "<a href=\"https://www.p-snow.org/tag-english.html\">Posts</a>"
               "<a href=\"https://www.p-snow.org/tag-japanese.html\">日本語記事</a>"
-              "<a href=\"https://www.p-snow.org/about.xml\">About</a>"
+              "<a href=\"https://www.p-snow.org/about.html\">About</a>"
               "<a href=\"https://www.p-snow.org/rss.xml\">RSS</a>"
               "</nav><h1>.dot life</h1><p>by p-snow</p></header>"))
 (setq org-static-blog-no-post-tag "nonpost")
