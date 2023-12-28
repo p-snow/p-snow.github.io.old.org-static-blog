@@ -38,12 +38,13 @@ t(require 'ox-publish)
               "<a href=\"https://www.p-snow.org/config\">My Config</a>"
               "<a href=\"https://www.p-snow.org/tag-english.html\">Posts</a>"
               "<a href=\"https://www.p-snow.org/tag-japanese.html\">日本語記事</a>"
+              "<a href=\"https://www.p-snow.org/about.xml\">About</a>"
               "<a href=\"https://www.p-snow.org/rss.xml\">RSS</a>"
               "</nav><h1>.dot life</h1><p>by p-snow</p></header>"))
+(setq org-static-blog-rss-excluded-tag "norss")
+
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
-
-
 (setq org-export-with-broken-links 'mark
       org-export-use-babel nil)
 
@@ -52,23 +53,6 @@ t(require 'ox-publish)
       org-html-head-include-default-style nil
       org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
-;; (setq org-publish-project-alist
-;;       (list
-;;        (list "org-site:main"
-;;              :recursive nil
-;;              ;; :base-directory "."
-;;              :base-directory "./content"
-;;              :publishing-function 'org-html-publish-to-html
-;;              :publishing-directory "./public"
-;;              :exclude "README.org"
-;;              :auto-sitemap t
-;;              :with-author nil
-;;              :with-creator t
-;;              :with-toc t
-;;              :section-numbers nil
-;;              :time-stamp-file nil)))
-
-;; (org-publish-all t)
 (org-static-blog-publish)
 
 (message "Build complete!")
