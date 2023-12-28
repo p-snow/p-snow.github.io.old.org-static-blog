@@ -22,9 +22,10 @@ t(require 'ox-publish)
 (setq org-static-blog-posts-directory "./content/posts/")
 (setq org-static-blog-drafts-directory "./content/drafts/")
 (setq org-static-blog-enable-tags t)
-(setq org-static-blog-use-preview nil)
+(setq org-static-blog-use-preview t)
 (setq org-static-blog-preview-start "<preview>")
 (setq org-static-blog-preview-end "</preview>")
+(setq org-static-blog-preview-ellipsis "(read more...)")
 (setq org-static-blog-preview-link-p t)
 (setq org-static-blog-page-header
       (concat "<meta charset=\"utf-8\">"
@@ -54,6 +55,7 @@ t(require 'ox-publish)
       org-html-head-include-default-style nil
       org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
+(org-static-blog-publish-file "./content/drafts/about.org")
 (org-static-blog-publish)
 
 (message "Build complete!")
