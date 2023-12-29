@@ -1,7 +1,7 @@
 #+title: Org内でタスク名のヒストリを残す
 #+date: <2023-11-21 Tue 18:58>
 #+description:
-#+filetags: org japanese mail
+#+filetags: org japanese
 
 #+SETUPFILE: content/header
 
