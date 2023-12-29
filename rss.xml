@@ -4,7 +4,118 @@
 <title><![CDATA[.dot life]]></title>
 <description><![CDATA[.dot life]]></description>
 <link>https://www.p-snow.org</link>
-<lastBuildDate>Fri, 29 Dec 2023 05:33:53 +0000</lastBuildDate>
+<lastBuildDate>Fri, 29 Dec 2023 06:12:03 +0000</lastBuildDate>
+<item>
+  <title><![CDATA[Emacsでroot所有のファイルを編集する]]></title>
+  <description><![CDATA[
+<p>
+<preview>
+EmacsでPC内のrootユーザ所有のファイルを編集したいという場面は、特にLinuxをお使いなら、けっこうあるのではないでしょうか。もしすでにEmacsが起動していればC-x C-fを押して、ミニバッファに以下を入力するとよいです。(ログインユーザがsudoerであることが前提です)
+</preview>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">/sudo:root@localhost:&lt;&#12501;&#12449;&#12452;&#12523;&#12497;&#12473;&gt;
+</pre>
+</div>
+
+<p>
+すでに開いているファイルをroot権限で編集したければ次のようなコマンドを用意してみるのもよいかも。
+</p>
+
+<p>
+<details><summary>Elisp Code</summary><p>
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">my/sudo-edit-local-file</span> ()
+  <span style="font-style: italic;">"Reopen the current buffer file with root privileges."</span>
+  (<span style="font-weight: bold;">interactive</span>)
+  (<span style="font-weight: bold;">when</span> (file-exists-p buffer-file-name)
+    (find-alternate-file
+     (concat <span style="font-style: italic;">"/sudo:root@localhost:"</span>
+             buffer-file-name))))
+</pre>
+</div>
+<p>
+</p></details>
+</p>
+
+<p>
+以上のような方法でファイルを開こうとするとパスワードを尋ねられるわけですが、auth sourceの仕組みを使って予めパスワードをEmacsが見られるようにしておけば入力せずに済みます。私の場合はpass(password-store)を使っているので以下のような感じ。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">auth-source</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">auth-source-pass</span>)
+
+(auth-source-pass-enable)
+</pre>
+</div>
+
+<p>
+あとは ~/.password-store/&lt;hostname&gt;/&lt;username&gt;.gpg の一行目にログインパスワードを書けばOK。
+</p>
+<div class="taglist"><a href="https://www.p-snow.org/tags.html">Tags</a>: <a href="https://www.p-snow.org/tag-emacs.html">emacs</a> <a href="https://www.p-snow.org/tag-japanese.html">japanese</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[japanese]]></category>
+  <link>https://www.p-snow.org/20231203-1930.html</link>
+  <guid>https://www.p-snow.org/20231203-1930.html</guid>
+  <pubDate>Sun, 03 Dec 2023 19:30:00 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[Orgの項目を自分宛てにメールする]]></title>
+  <description><![CDATA[
+<p>
+<preview>
+「２要素認証で必要だから」。残念な話だが、私がスマホをもつ最大の理由がコレだ。世の中にはモバイル機器だけでいろいろなことをやろうと腐心する方々がいるが、その流れには個人的に乗れずにいる。それでも<a href="https://lwn.net/Articles/936576/">EmacsのAndroid対応</a>が議論を呼んだり、<a href="https://organice.200ok.ch/">こちら</a>や<a href="https://orgzly.com/">あちら</a>のようにOrgをモバイルで使える手段が増えることにはポジティブな印象をもっている。ただ私はと言うと、PCでつくったOrgの内容をメールとしてモバイル端末で見られれば充分だ。
+</preview>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">smtpmail</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">message</span>)
+
+(<span style="font-weight: bold;">setq</span> smtpmail-default-smtp-server <span style="font-style: italic;">"&lt;&lt;smtp-host&gt;&gt;"</span>
+      smtpmail-smtp-service 465
+      smtpmail-smtp-user user-mail-address
+      smtpmail-stream-type 'ssl
+      smtpmail-mail-address user-mail-address)
+(<span style="font-weight: bold;">setq</span> message-send-mail-function 'smtpmail-send-it)
+
+(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">my/org-subtree-send-email</span> ()
+  <span style="font-style: italic;">"Send an email containing the contents of the subtree at the entry at point."</span>
+  (<span style="font-weight: bold;">interactive</span>)
+  (<span style="font-weight: bold;">org-save-outline-visibility</span> t
+    (<span style="font-weight: bold;">save-excursion</span>
+      (org-fold-show-all)
+      (<span style="font-weight: bold;">let*</span> ((heading (org-get-heading t t t t))
+             (org-export-with-toc nil)
+             (org-export-with-author nil)
+             (org-export-show-temporary-export-buffer nil)
+             (message-kill-buffer-on-exit t)
+             (exp-buf (org-ascii-export-as-ascii nil t t t)))
+        (message-mail user-mail-address heading)
+        (message-goto-body)
+        (insert (<span style="font-weight: bold;">with-current-buffer</span> exp-buf (buffer-string)))
+        (message-send-and-exit)))))
+</pre>
+</div>
+
+<p>
+もっともよく活用する用途と言えばToDoリストだろう。買い物リストはその代表例だ。予めOrgの中に店舗ごとのトリガリストをつくっておき、買い物に行く段になったらリストから今回の買うべきターゲットを浮かび上がらせてコマンド一発でメール送信。トクバイを知らせるアプリに踊らされることもないし、なんちゃらペイをフル活用してお得にポイントを貯めることもない。
+</p>
+
+<p>
+あとは考えたいことリストだろうか。散歩中に時間ができたときなど、脳にまかせて気ままに思考を走らせると脱線がすぎるので、その交通整理役としてリストをつくっておきメール送信することがたまにはある。いずれにしても、PC上で作戦を練り出先でそれを実行するというスキームにおいて、私はスマホの第二の活用法を見出しているようだ。そのスキームを支えるのには、メールという古典的でオープンな仕組みが望ましい。
+</p>
+<div class="taglist"><a href="https://www.p-snow.org/tags.html">Tags</a>: <a href="https://www.p-snow.org/tag-org.html">org</a> <a href="https://www.p-snow.org/tag-japanese.html">japanese</a> <a href="https://www.p-snow.org/tag-mail.html">mail</a> </div>]]></description>
+  <category><![CDATA[org]]></category>
+  <category><![CDATA[japanese]]></category>
+  <category><![CDATA[mail]]></category>
+  <link>https://www.p-snow.org/20231128-1043.html</link>
+  <guid>https://www.p-snow.org/20231128-1043.html</guid>
+  <pubDate>Tue, 28 Nov 2023 10:43:00 +0000</pubDate>
+</item>
 <item>
   <title><![CDATA[Org内でタスク名のヒストリを残す]]></title>
   <description><![CDATA[
@@ -46,10 +157,9 @@
 <p>
 この機能を使うようになってからタスクの作成と改名が軽快におこなえるようになった気がします。「会議で提案されたアレをやっておく」のようなタスクが作成できるようになって、後で修正すせばいいからとタスク作成の心理的な負荷が軽減される一方で、修正後に残されたヒストリを見て「発生時にはアレと呼ばなければならないくらい、このタスクはあの時点では自分にとって新規性の高いものだったんだな」などと振り返ることができるのです。
 </p>
-<div class="taglist"><a href="https://www.p-snow.org/tags.html">Tags</a>: <a href="https://www.p-snow.org/tag-org.html">org</a> <a href="https://www.p-snow.org/tag-japanese.html">japanese</a> <a href="https://www.p-snow.org/tag-mail.html">mail</a> </div>]]></description>
+<div class="taglist"><a href="https://www.p-snow.org/tags.html">Tags</a>: <a href="https://www.p-snow.org/tag-org.html">org</a> <a href="https://www.p-snow.org/tag-japanese.html">japanese</a> </div>]]></description>
   <category><![CDATA[org]]></category>
   <category><![CDATA[japanese]]></category>
-  <category><![CDATA[mail]]></category>
   <link>https://www.p-snow.org/20231121-1858.html</link>
   <guid>https://www.p-snow.org/20231121-1858.html</guid>
   <pubDate>Tue, 21 Nov 2023 18:58:00 +0000</pubDate>
