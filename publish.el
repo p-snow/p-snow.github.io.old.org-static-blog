@@ -36,7 +36,7 @@ t(require 'ox-publish)
 (setq org-static-blog-page-preamble
       (concat "<header><nav>"
               "<a href=\"https://www.p-snow.org\">Home</a>"
-              "<a href=\"https://p-snow.org/config/dotfiles.html#orgb4342cf\">Emacs Config</a>"
+              "<a href=\"https://www.p-snow.org/config/dotfiles.html#orgb4342cf\">Emacs Config</a>"
               "<a href=\"https://www.p-snow.org/tag-english.html\">Posts</a>"
               "<a href=\"https://www.p-snow.org/tag-japanese.html\">日本語記事</a>"
               "<a href=\"https://www.p-snow.org/about.html\">About</a>"
